@@ -127,6 +127,10 @@ class TodoController extends Controller
      * @OA\Get (
      *     path="/api/todo/get/{id}",
      *     tags={"ToDo"},
+     *     security={
+     *          { "api_key": {} },
+     *          { "petstore_auth": {"write:pets", "read:pets"} }
+     *     },
      *     @OA\Parameter(
      *         in="path",
      *         name="id",

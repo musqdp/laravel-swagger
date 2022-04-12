@@ -3,3 +3,4 @@
 3. php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
 4. Connect Database.
 5. Run php artisan migrate:fresh --seed
+6. php artisan l5-swagger:generate

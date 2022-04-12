@@ -328,6 +328,10 @@
             }
         }
     },
+    "externalDocs": {
+        "description": "More documentation here...",
+        "url": "https://example.com/externaldoc1/"
+    },
     "security": [
         []
     ]

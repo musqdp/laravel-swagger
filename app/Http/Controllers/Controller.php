@@ -15,8 +15,13 @@ class Controller extends BaseController
      *         version="1.0",
      *         title="Todo List Api",
      *         description="Demo Todo List Api",
-     *     )
+     *     ),
+     *     @OA\ExternalDocumentation(
+     *         description="More documentation here...",
+     *         url="https://example.com/externaldoc1/"
+     *   )
      * ),
+     *
      * @OA\SecurityScheme(
      *      securityScheme="bearerAuth",
      *      in="header",

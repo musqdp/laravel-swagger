@@ -133,6 +133,32 @@ class TodoController extends Controller
      *         required=true,
      *         @OA\Schema(type="string")
      *     ),
+     *
+     *     @OA\Parameter (
+     *          in="query",
+     *          name="test",
+     *          required=true,
+     *          @OA\Schema(
+     *                  schema="StringList",
+     *                  @OA\Property(property="value", type="array", @OA\Items(anyOf={@OA\Schema(type="string")}))
+     *          ),
+     *          @OA\Schema(
+     *                  schema="String",
+     *                  @OA\Property(property="value", type="string")
+     *          ),
+     *          @OA\Schema(
+     *                  schema="Object",
+     *                  @OA\Property(property="value", type="object")
+     *          ),
+     *          @OA\Schema(
+     *                  schema="mixedList",
+     *                  @OA\Property(property="fields", type="array", @OA\Items(oneOf={
+     *                      @OA\Schema(ref="#/components/schemas/StringList"),
+     *                      @OA\Schema(ref="#/components/schemas/String"),
+     *                      @OA\Schema(ref="#/components/schemas/Object")
+     *                  }))
+     *          )
+     *      ),
      *     @OA\Response(
      *         response=200,
      *         description="success",

@@ -190,6 +190,27 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "name": "test",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "schema": "StringList",
+                            "properties": {
+                                "value": {
+                                    "type": "array",
+                                    "items": {
+                                        "anyOf": [
+                                            {
+                                                "type": "string"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "type": "object"
+                        }
                     }
                 ],
                 "responses": {

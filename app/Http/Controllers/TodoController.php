@@ -297,4 +297,30 @@ class TodoController extends Controller
     public function upload(Request $request){
         return response()->json(['success'=>true]);
     }
+
+    /**
+     * @OA\Post(
+     *   path="/api/todo/avatar",
+     *   summary="Form post",
+     *   tags={"Media"},
+     *   @OA\RequestBody(
+     *     @OA\MediaType(
+     *       mediaType="multipart/form-data",
+     *       @OA\Schema(
+     *         @OA\Property(property="name"),
+     *         @OA\Property(
+     *           description="file to upload",
+     *           property="avatar",
+     *           type="string",
+     *           format="binary",
+     *         ),
+     *       )
+     *     )
+     *   ),
+     *   @OA\Response(response=200, description="Success")
+     * )
+     */
+    public function avatar(Request $request) {
+        return response()->json(['success'=>true]);
+    }
 }

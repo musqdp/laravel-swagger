@@ -385,6 +385,37 @@
                     }
                 }
             }
+        },
+        "/api/todo/avatar": {
+            "post": {
+                "tags": [
+                    "Media"
+                ],
+                "summary": "Form post",
+                "operationId": "6a8790faa5852cc659a90a653d3e8832",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "name": {},
+                                    "avatar": {
+                                        "description": "file to upload",
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
         }
     },
     "components": {

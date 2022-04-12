@@ -17,14 +17,14 @@ class Controller extends BaseController
      *         description="Demo Todo List Api",
      *     )
      * ),
-     *      @OA\SecurityScheme(
-     *           securityScheme="bearerAuth",
-     *           in="header",
-     *           name="Authorization",
-     *           type="http",
-     *           scheme="Bearer",
-     *           bearerFormat="JWT",
-     *      )
+     * @OA\SecurityScheme(
+     *      securityScheme="bearerAuth",
+     *      in="header",
+     *      name="Authorization",
+     *      type="http",
+     *      scheme="Bearer",
+     *      bearerFormat="JWT",
+     * )
      */
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

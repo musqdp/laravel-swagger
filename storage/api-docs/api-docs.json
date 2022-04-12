@@ -347,6 +347,44 @@
                     }
                 }
             }
+        },
+        "/api/todo/upload": {
+            "post": {
+                "tags": [
+                    "Media"
+                ],
+                "summary": "Upload document",
+                "description": "",
+                "operationId": "c8d0cb2044ec902133f765e1882b2a80",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/octet-stream": {
+                            "schema": {
+                                "required": [
+                                    "content"
+                                ],
+                                "properties": {
+                                    "content": {
+                                        "description": "Binary content of file",
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
         }
     },
     "components": {
